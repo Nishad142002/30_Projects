@@ -138,7 +138,7 @@ startButton.addEventListener("click", () => {
   modal.style.display = "none";
   intervalId = setInterval(() => {
     render();
-  }, 200);
+  }, 300);
   timerIntervalId = setInterval(() => {
     let [min, sec] = time.split(":").map(Number);
 
