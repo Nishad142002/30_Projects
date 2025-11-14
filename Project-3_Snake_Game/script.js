@@ -1,4 +1,8 @@
 const board = document.querySelector(".board");
+const styles = window.getComputedStyle(board);
+const columnsString = styles.getPropertyValue("grid-template-columns");
+const widhtHeigh = columnsString.split(" ")[0];
+
 const startButton = document.querySelector(".btn-start");
 const modal = document.querySelector(".modal");
 const startGameModal = document.querySelector(".start-game");
@@ -14,8 +18,8 @@ const mobileRight = document.querySelector("#right");
 const mobileLeft = document.querySelector("#left");
 const mobileDown = document.querySelector("#down");
 
-const blockHeight = 30;
-const blockWidth = 30;
+const blockHeight = Math.floor(parseInt(widhtHeigh));
+const blockWidth = Math.floor(parseInt(widhtHeigh));
 
 const cols = Math.floor(board.clientWidth / blockWidth);
 const rows = Math.floor(board.clientHeight / blockHeight);
