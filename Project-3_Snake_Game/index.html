@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="infos">
+          <div class="info">
+            <h3>High Score: <span id="high-score">0</span></h3>
+          </div>
+          <div class="info">
+            <h3>Score: <span id="score">0</span></h3>
+          </div>
+          <div class="info">
+            <h3>Time: <span id="time">00:00</span></h3>
+          </div>
+        </div>
+        <div class="board"></div>
+
+        <div class="mobile-btn-container">
+          <div class="mobile-btn" id="up">
+            <i class="ri-arrow-up-circle-fill"></i>
+          </div>
+          <div class="mobile-row-btn">
+            <div class="mobile-btn" id="left">
+              <i class="ri-arrow-left-circle-fill"></i>
+            </div>
+            <div class="mobile-btn" id="down">
+              <i class="ri-arrow-down-circle-fill"></i>
+            </div>
+            <div class="mobile-btn" id="right">
+              <i class="ri-arrow-right-circle-fill"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="modal">
+        <div class="start-game">
+          <h3>Welcome to Snake Game</h3>
+          <button class="btn btn-start">Start Game</button>
+        </div>
+        <div class="game-over">
+          <h3>Game Over</h3>
+          <button class="btn btn-restart">Restart Game</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+:root {
+  --bg-darkr: #000047;
+  --text-darkr: #fff;
+  --bg-lightr: #e6e6ff;
+  --text-lightr: #000047;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.main.light {
+  --bg: #fff;
+  --text: #000047;
+  --bg-container: #e6e6ff;
+  --bg-dowlContainer: #b8b8ff;
+  --bg-progresContainer: #fff;
+  --bg-progresBar: #000047;
+  --bg-toggleBtn: #fff;
+  --bg-downlBtn: #000047;
+  --downltext: #fff;
+  --borderclr: #00001a;
+}
+
+.main.dark {
+  --bg: #00001a;
+  --text: #fff;
+  --bg-container: #000047;
+  --bg-dowlContainer: #00008b;
+  --bg-progresContainer: #00001a;
+  --bg-progresBar: #fff;
+  --bg-toggleBtn: #00001a;
+  --bg-downlBtn: #fff;
+  --downltext: #000047;
+  --borderclr: #fff;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: all 0.4s ease;
+}
+.main .container {
+  padding: 25px;
+  background-color: var(--bg-container);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.main .container .download-animation {
+  padding: 25px;
+  background-color: var(--bg-dowlContainer);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  border-radius: 15px;
+}
+.main .container .download-animation .progress-container {
+  width: 95%;
+  height: 13px;
+  background-color: var(--bg-progresContainer);
+  border-radius: 10px;
+}
+.main .container .download-animation .progress-container .progress-bar {
+  width: 0%;
+  height: 99%;
+  background-color: var(--bg-progresBar);
+  border-radius: 10px;
+}
+.main .container .btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+}
+.main .container .btn button {
+  padding: 8px 14px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.main .container .btn .toggle-btn {
+  background-color: var(--bg-toggleBtn);
+  border: 1px solid var(--borderclr);
+  color: var(--text);
+}
+.main .container .btn .donwload-btn {
+  background-color: var(--bg-downlBtn);
+  color: var(--downltext);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Okra;
+  src: url(./fonts/Okra-Regular.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Okra, Helvetica;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  border-bottom: 1px solid #cccccc69;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding: 28px 22px;
+  border-right: 1px solid #cccccc69;
+}
+
+.headerAddress {
+  padding: 20px 40px;
+}
+.headerAddress h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.headerAddress p {
+  font-size: 13px;
+}
+
+.searchBox {
+  flex-grow: 1;
+  display: flex;
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  border-radius: 10px;
+}
+
+.searchBox input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchBox button {
+  padding: 13px;
+  border: none;
+  background: transparent;
+}
+
+.headerBtn {
+  display: flex;
+  margin-right: 50px;
+  gap: 50px;
+}
+
+.headerBtn button {
+  font-size: 17.5px;
+  color: #363636;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: transparent;
+  letter-spacing: 1.3px;
+}
+
+.headerBtn button:last-child {
+  background-color: #0a831e;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bannerSection {
+  max-width: 1280px;
+  margin: auto;
+}
+
+.bannerSection img {
+  width: 100%;
+}
