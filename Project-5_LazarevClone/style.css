@@ -90,6 +90,7 @@ nav button svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 #page1 .hero-top-p {
@@ -382,6 +383,8 @@ nav button svg {
   font-weight: 600;
   border-radius: 50px;
   border: none;
+  position: sticky;
+  top: 80%;
 }
 
 .page6-right {
@@ -401,7 +404,6 @@ nav button svg {
   width: 100%;
   margin-top: 5vh;
   padding: 5vh 0;
-  border-top: 2px solid #fff;
 }
 
 #page6-content h1 {
@@ -442,6 +444,7 @@ nav button svg {
   z-index: 8;
 }
 .page6-elem h3 {
+  width: 20%;
   font-size: 1.5vw;
   font-weight: 400;
   position: relative;
@@ -481,4 +484,187 @@ nav button svg {
 .page6-elem:hover .over {
   transform: translateY(0);
   opacity: 1;
+}
+
+summary::marker {
+  content: "";
+}
+
+.uiux,
+.product {
+  border-top: 2px solid #fff;
+  padding: 3vh 0;
+  cursor: pointer;
+}
+
+#page7 {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  padding: 10vh 10vw;
+}
+
+#page7 > h1 {
+  font-size: 6vw;
+  color: #111;
+  padding-left: 25vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
+  line-height: 5.8vw;
+  border-bottom: 1px solid #dadada;
+}
+
+#page7 #page7-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#page7-content .right-7 {
+  width: 70%;
+}
+
+#page7-content .right-7 p {
+  font-size: 1.5vw;
+  color: #000;
+  margin-bottom: 5vh;
+  width: 80%;
+}
+
+#page7-content #blue-btn {
+  background-color: #4f5bff;
+  width: 15vw;
+  height: 3.5vw;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blue-btn h4 {
+  position: absolute;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.85vw;
+  letter-spacing: 1px;
+}
+
+#blue-btn h4 i {
+  font-size: 1vw;
+  font-weight: 100;
+  margin-left: 0.5vw;
+}
+
+#page7 #page7-bottom {
+  height: 44vh;
+  width: 100%;
+  border-top: 1px solid #dadada;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  /* background-color: #333; */
+}
+
+#page7-bottom #btm7-part1 {
+  border-right: 1px solid #dadada;
+  width: 30%;
+  height: 100%;
+}
+
+#page7-bottom #btm7-part2 {
+  border-right: 1px solid #dadada;
+  width: 25%;
+  height: 100%;
+}
+
+#btm7-part2 h4:nth-child(2) {
+  transform: translateX(0);
+}
+#btm7-part2 h4:nth-child(3) {
+  transform: translateX(10%);
+}
+#btm7-part2 h4:nth-child(4) {
+  transform: translateX(20%);
+}
+#btm7-part2 h4:nth-child(5) {
+  transform: translateX(30%);
+}
+#btm7-part2 h4:nth-child(6) {
+  transform: translateX(40%);
+}
+#btm7-part2 h4:nth-child(7) {
+  transform: translateX(50%);
+}
+
+#page7-bottom #btm7-part3 {
+  border-right: 1px solid #dadada;
+  width: 20%;
+  height: 100%;
+}
+
+#btm7-part3 h4:nth-child(2) {
+  transform: translateX(0);
+}
+#btm7-part3 h4:nth-child(3) {
+  transform: translateX(10%);
+}
+
+#page7-bottom #btm7-part4 {
+  border-right: 1px solid #dadada;
+  width: 20%;
+  height: 100%;
+}
+
+#btm7-part4 h4:nth-child(2) {
+  transform: translateX(0);
+}
+#btm7-part4 h4:nth-child(3) {
+  transform: translateX(10%);
+}
+#btm7-part4 h4:nth-child(4) {
+  transform: translateX(20%);
+}
+
+#page7-bottom #btm7-part5 {
+  width: 11%;
+  height: 100%;
+}
+
+#page7-bottom .btm7-parts {
+  padding: 3vh 5px;
+}
+
+.btm7-parts h5 {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.9vw;
+  margin-bottom: 4vh;
+}
+
+.btm7-parts h4 {
+  background-color: #111;
+  width: 75%;
+  padding: 5px 5px;
+  margin-bottom: 0.3vh;
+  border-radius: 50px;
+  font-size: 0.85vw;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.btm7-parts h4 span {
+  width: 2vw;
+  height: 2vw;
+  background-color: #333;
+  padding: 0.5vw;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1vw;
+}
+
+#page8 {
+  height: 100vh;
 }
