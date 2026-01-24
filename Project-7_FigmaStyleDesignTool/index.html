@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Design Studio</title>
+    <link rel="shortcut icon" href="./assets/Logo.png" type="image/x-icon" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="variables.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="dark">
+      <div class="app-container">
+        <header class="toolbar">
+          <div class="logo">
+            <div class="logo-img">
+              <img src="./assets/Logo.png" alt="" />
+            </div>
+            <div class="logo-title">
+              <h3>CANVAS</h3>
+              <p>DESIGN STUDIO</p>
+            </div>
+          </div>
+          <div class="btns-container">
+            <button class="btn" id="add-rect">
+              <p>
+                <i class="ri-rectangle-line"></i>
+              </p>
+            </button>
+            <button class="btn" id="add-text">
+              <p><i class="ri-text-block"></i></p>
+            </button>
+            <button class="btn" id="save-btn">
+              <p><i class="ri-save-line"></i> Save Layout</p>
+            </button>
+            <div class="btn export-btn">
+              <p><i class="ri-download-2-line"></i> Export</p>
+              <div class="export-type">
+                <button class="exp-btn" id="exp-json">JSON</button>
+                <button class="exp-btn" id="exp-html">HTML</button>
+              </div>
+            </div>
+
+            <div class="theamBtn-container">
+              <div class="theamBtn"><i class="ri-moon-line"></i></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="editor-body">
+          <section class="canvas-container">
+            <div id="canvas"></div>
+          </section>
+
+          <aside class="sidebar">
+            <div class="layers-panel">
+              <h3>Layers</h3>
+              <div id="layers-list"></div>
+            </div>
+
+            <div class="properties-panel">
+              <h3>Properties</h3>
+
+              <div class="props-elem">
+                <div class="input-container">
+                  <div class="input">
+                    <label for="elem-width">Widht :</label>
+                    <input
+                      type="number"
+                      id="elem-width"
+                      name="elem-width"
+                      value="0"
+                    />
+                  </div>
+
+                  <div class="input">
+                    <label for="elem-height">Height :</label>
+                    <input
+                      type="number"
+                      id="elem-height"
+                      name="elem-height"
+                      value="0"
+                    />
+                  </div>
+                </div>
+
+                <div class="input">
+                  <label for="elem-bgColor">Background Color :</label>
+                  <input
+                    type="text"
+                    id="elem-bgColor"
+                    name="elem-bgColor"
+                    value=""
+                  />
+                </div>
+
+                <div class="input">
+                  <label for="elem-text">Text Content :</label>
+                  <input type="text" id="elem-text" name="elem-text" value="" />
+                </div>
+                <div class="input">
+                  <label for="elem-bgColor">Text Color :</label>
+                  <input
+                    type="text"
+                    id="elem-textColor"
+                    name="elem-textColor"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <button id="delete-btn" class="delet-elm">Delete Element</button>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

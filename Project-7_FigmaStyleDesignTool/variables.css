@@ -1,0 +1,46 @@
+:root {
+  --pading-sm: 2rem;
+  --logo: url("./assets/Logo.png");
+}
+
+main.light {
+  --bg-color: #f5f5f5;
+  --bg-color2: #d6d6d6;
+  --elem-color: #d6d6d6;
+
+  --btn-color: #64c3bf;
+  --btn-color2: #b4b3b3;
+  --border-color: #000;
+  --border-color2: #000;
+  --border-color3: #d8d8d8;
+
+  --scroll-track: #d8d8d8;
+  --scroll-thumb: #b4b3b3;
+  --scroll-thumb2: #909090;
+
+  /* Text Color */
+  --primary-clr: #000;
+
+  --canvas-bg: url("./assets/gridlight.jpeg");
+}
+
+main.dark {
+  --bg-color: #222;
+  --bg-color2: #333;
+  --elem-color: #111;
+
+  --btn-color: #977bab;
+  --btn-color2: #444;
+  --border-color: #99999987;
+  --border-color2: #fff;
+  --border-color3: #1e1e1e;
+
+  --scroll-track: #1e1e1e;
+  --scroll-thumb: #444;
+  --scroll-thumb2: #555;
+
+  /* Text Color */
+  --primary-clr: #fff;
+
+  --canvas-bg: url("./assets/griddark.jpeg");
+}

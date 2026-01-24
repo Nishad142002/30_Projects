@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+main .app-container {
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  /* background-color: gold; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER */
+
+.toolbar {
+  width: 100%;
+  padding: 0rem 0.5rem;
+  padding-bottom: 0.5rem;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border-bottom: 1px solid #999999ae; */
+}
+
+.logo {
+  width: 10rem;
+  height: 3rem;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  color: var(--primary-clr);
+}
+
+.logo-img {
+  width: 4rem;
+  height: 3rem;
+}
+.logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo-title h3 {
+  font-weight: 800;
+}
+.logo-title p {
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+}
+
+.btns-container {
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.btns-container .btn {
+  padding: 0.5rem 0.8rem;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background-color: var(--btn-color);
+  color: var(--primary-clr);
+  transition: all ease 0.3s;
+}
+
+.btn p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btns-container .export-btn {
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.export-btn .export-type {
+  position: absolute;
+  padding: 0.5rem;
+  background-color: var(--bg-color2);
+  top: 100%;
+  left: 0;
+  border-radius: 10px;
+  display: none;
+  opacity: 0;
+  transition: all ease 0.5s;
+}
+.export-btn:hover .export-type {
+  display: block;
+  opacity: 1;
+}
+.export-type .exp-btn {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: var(--bg-color2);
+  border-bottom: 1px solid #555;
+  color: var(--primary-clr);
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.exp-btn:hover {
+  background-color: var(--btn-color2);
+}
+
+.btns-container .theamBtn-container {
+  width: 3rem;
+  height: 1.8rem;
+  margin-left: 2rem;
+  border-radius: 50px;
+  background-color: var(--btn-color2);
+  border: 3px solid var(--border-color3);
+  cursor: pointer;
+  position: relative;
+}
+
+.theamBtn-container .theamBtn {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--btn-color);
+  color: var(--primary-clr);
+  border-radius: 50%;
+  border: 2px solid var(--border-color3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  transition: all ease 0.3s;
+}
+
+.btns-container .btn:hover {
+  scale: 1.05;
+}
+
+/* Editor Body */
+
+.app-container .editor-body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: hidden;
+  /* background-color: green; */
+}
+
+.editor-body .canvas-container {
+  width: 80%;
+  height: 100%;
+  background-image: var(--canvas-bg);
+  background-size: cover;
+  border-radius: 10px;
+}
+#canvas {
+  /* background-color: var(--bg-color); */
+  width: 100%;
+  height: 100%;
+  position: relative; /* Essential for coordinate-based positioning */
+  overflow: hidden; /* Keeps elements within boundaries [cite: 32] */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+
+.canvas-element {
+  position: absolute;
+  cursor: move;
+  box-sizing: border-box;
+  color: var(--primary-clr);
+  transform-origin: center center;
+}
+
+/* Visual indicator for selected elements [cite: 21] */
+.selected {
+  outline: 2px solid #f49907;
+  /* #18a0fb */
+}
+
+/* Corner handles for resizing [cite: 22, 34] */
+.handle {
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 1px solid #18a0fb;
+  position: absolute;
+}
+
+.corner-handler {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  position: absolute;
+}
+
+.corner-handler:nth-child(1) {
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  cursor: nw-resize;
+}
+.corner-handler:nth-child(2) {
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  cursor: ne-resize;
+}
+.corner-handler:nth-child(3) {
+  border-bottom: 1px solid #fff;
+  border-left: 1px solid #fff;
+  cursor: sw-resize;
+}
+.corner-handler:nth-child(4) {
+  border-bottom: 1px solid #fff;
+  border-right: 1px solid #fff;
+  cursor: se-resize;
+}
+
+.rotet-handler {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+}
+
+.rotet-handler i {
+  font-size: 1.3rem;
+  pointer-events: none;
+}
+
+.sidebar {
+  /* background-color: pink; */
+  width: 20%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 1rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--primary-clr);
+}
+
+.sidebar .layers-panel {
+  width: 100%;
+  height: 55%;
+  /* background-color: pink; */
+  border-bottom: 2px solid var(--border-color);
+}
+
+.layers-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.layers-panel #layers-list {
+  /* background-color: red; */
+  width: 100%;
+  height: 85%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow-y: auto;
+}
+
+#layers-list::-webkit-scrollbar {
+  width: 8px;
+}
+#layers-list::-webkit-scrollbar-track {
+  background-color: var(--scroll-track);
+  border-radius: 10px;
+}
+#layers-list::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb);
+  border-radius: 10px;
+  border: 2px solid var(--border-color3);
+}
+#layers-list::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-thumb2);
+}
+
+#layers-list .elem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--elem-color);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+#layers-list .elem i {
+  font-size: 1rem;
+}
+
+.elem .layer-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.z-btns {
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--border-color2);
+}
+.z-btns .z-btn {
+  border: none;
+  outline: none;
+  background-color: var(--bg-color);
+  color: var(--primary-clr);
+  transition: all ease 0.3s;
+}
+.z-btn:hover {
+  opacity: 0.5;
+}
+#z-up {
+  border-right: 1px solid var(--border-color2);
+}
+#z-down {
+  border-left: 1px solid var(--border-color2);
+}
+
+.sidebar .properties-panel {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+
+  /* background-color: red; */
+}
+
+.properties-panel h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.properties-panel .props-elem {
+  width: 100%;
+  height: 80%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all ease 0.2s;
+}
+
+.props-elem .input-container {
+  display: flex;
+  gap: 0.5rem;
+}
+.props-elem .input {
+  background-color: var(--elem-color);
+  padding: 0.5rem;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.input label {
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.input input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--primary-clr);
+  font-size: 1rem;
+}
+
+.delet-elm {
+  padding: 0.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: rgb(206, 1, 1);
+  color: #fff;
+  border: 2px solid transparent;
+  transition: all ease 0.3s;
+}
+
+.delet-elm:hover {
+  border: 2px solid var(--border-color2);
+}
